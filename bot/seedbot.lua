@@ -464,7 +464,7 @@ function load_plugins()
       local t = loadfile("plugins/"..v..'.lua')()
       plugins[v] = t
     end)
-
+ 
     if not ok then
       print('\27[31mError loading plugin '..v..'\27[39m')
       print(tostring(io.popen("lua plugins/"..v..".lua"):read('*all')))
